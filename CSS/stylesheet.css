@@ -1,0 +1,89 @@
+.page {
+    background-color: #103E3E;
+}
+
+.container {
+    background-color: #204E4E;
+    min-height: 750px;
+    border-left: 3px solid #6F8F8F;
+    border-right: 3px solid #6F8F8F;
+    box-shadow: 0px 10px 10px 5px #052A2A;
+
+}
+
+.col-md-12 {
+    text-align: center;
+
+}
+
+img {
+    height: 200px;
+    margin: 75px 45px;
+}
+
+.cat {
+    height: 400px;
+    background-color: #4f7a7a;
+    margin-top: 25px;
+    box-shadow: 0px 0px 5px 2px #103E3E inset;
+}
+
+#wake-up {
+    height: 100px;
+    background-color: #6F8F8F;
+    margin-top: 25px;
+    padding: 20px;
+    font-size: 50px;
+}
+
+#gameClick {
+    margin: 0 auto;
+    padding: 8px;
+    width: 160px;
+    font-family: 'amiga_forever_pro2regular';
+    font-size: 15px;
+    text-align: center;
+    color: #103E3E;
+    background-color: #336262;
+    border: 3px solid #6F8F8F;
+    box-shadow: 10px 10px 10px #103E3E;
+}
+
+.gameTitle {
+    margin-top: 200px;
+    padding: 20px;
+	font-family: 'amiga_forever_pro2regular';
+    font-size: 100px;
+    text-align: center;
+    color: #103E3E;
+    background-color: #336262;
+    border: 3px solid #6F8F8F;
+    box-shadow: 10px 10px 10px #103E3E;
+}
+
+
+.gameBoard {
+    font-family: 'amiga_forever_pro2regular';
+    background-color: #336262;
+    height: 700px;
+    color:#103E3E;
+    margin: 50px 100px;
+    border: 3px solid #6F8F8F;
+    box-shadow: 10px 10px 10px #103E3E;
+}
+.row {
+
+}
+@font-face {
+    font-family: 'amiga_forever_pro2regular';
+    src: url('amiga4ever_pro2-webfont.eot');
+    src: url('amiga4ever_pro2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('amiga4ever_pro2-webfont.woff2') format('woff2'),
+         url('amiga4ever_pro2-webfont.woff') format('woff'),
+         url('amiga4ever_pro2-webfont.ttf') format('truetype'),
+         url('amiga4ever_pro2-webfont.svg#amiga_forever_pro2regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
