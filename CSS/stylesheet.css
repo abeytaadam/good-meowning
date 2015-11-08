@@ -21,6 +21,17 @@ img {
     margin: 75px 45px;
 }
 
+.col-md-6 {
+    text-align: center;
+    float: none;
+}
+
+#countDown {
+    float: none;
+    margin: 0 auto;
+    background-color: #6F8F8F;
+}
+
 .cat {
     height: 400px;
     background-color: #4f7a7a;
@@ -34,10 +45,11 @@ img {
     margin-top: 25px;
     padding: 20px;
     font-size: 50px;
+    box-shadow: 0px 2px 10px 2px #103E3E
 }
 
-#gameClick {
-    margin: 0 auto;
+.gameBox {
+    margin: 10px auto;
     padding: 8px;
     width: 160px;
     font-family: 'amiga_forever_pro2regular';
@@ -49,8 +61,14 @@ img {
     box-shadow: 10px 10px 10px #103E3E;
 }
 
+#gb1, #gb2 {
+    background-color: #6F8F8F;
+    box-shadow: 0px 2px 10px 2px #103E3E
+}
+
 .gameTitle {
     margin-top: 200px;
+    margin-bottom: 20px;
     padding: 20px;
 	font-family: 'amiga_forever_pro2regular';
     font-size: 100px;
@@ -61,13 +79,35 @@ img {
     box-shadow: 10px 10px 10px #103E3E;
 }
 
+.gameInst {
+    margin-top: 50px;
+    padding: 20px;
+    font-family: 'amiga_forever_pro2regular';
+    font-size: 25px;
+    text-align: center;
+    color: #103E3E;
+    background-color: #336262;
+    border: 3px solid #6F8F8F;
+    box-shadow: 10px 10px 10px #103E3E;
+}
+
+.players {
+    padding: 20px;
+    font-family: 'amiga_forever_pro2regular';
+    font-size: 15px;
+    text-align: center;
+    color: #103E3E;
+    background-color: #336262;
+    border: 3px solid #6F8F8F;
+    box-shadow: 10px 10px 10px #103E3E;
+}
 
 .gameBoard {
     font-family: 'amiga_forever_pro2regular';
     background-color: #336262;
-    height: 700px;
+    height: 600px;
     color:#103E3E;
-    margin: 50px 100px;
+    margin: 20px 100px;
     border: 3px solid #6F8F8F;
     box-shadow: 10px 10px 10px #103E3E;
 }
