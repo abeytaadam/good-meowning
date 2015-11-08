@@ -4,18 +4,16 @@ $(document).ready(function() {
 
 	//Click events
 	var clicks = 0;
-
 	//Countdown to game start
 	var count = 3;
-	var timer = setInterval(function() {
-		handleTimer(count);
-	}, 1000);
+	var timer = null;
 
 	//Player 1 keypresses
 	var countA = 0;
 	var countS = 0;
 	var countD = 0;
 	var countF = 0;
+
 
 	//Player 2 keypresses
 	var countJ = 0;
@@ -28,25 +26,22 @@ $(document).ready(function() {
 	$('#gameClick').click(function() {
 		$('.gameTitle').hide();
 		clicks++;
+		console.log(clicks);
 		if (clicks == 1) {
 			$('.gameInst').show();
 			$('.row').show();
-		} else if (clicks > 1) {
+		} else if (clicks == 2) {
 			$('#gameClick').hide();
 			$('.row').show();
 			$('.gameBoard').show();
 			$('.gameInst').hide();
 			$('.players').hide();
 			$('#countDown').show();
+			timer = setInterval(function() {
+				handleTimer(count);
+			}, 1000);
 		}
 	});
-
-	$('.gameInst').hide();
-	$('.row').hide();
-	$('.gameBoard').hide();
-	$('#countDown').hide();
-
-
 
 	function handleTimer() {
 		if (count === 0) {
@@ -58,19 +53,56 @@ $(document).ready(function() {
 		}
 	}
 
+	// Resets global variables (So many! Figure out how to fix this!)
+	function resetGame() {
+		timer = null;
+		count = 3;
+
+		countA = 0;
+		countS = 0;
+		countD = 0;
+		countF = 0;
+
+		countJ = 0;
+		countK = 0;
+		countL = 0;
+		countSC = 0;
+		console.log(countA, countJ);
+
+	}
+
+	// Reset button click handler
+	$('#resetBtn').click(function() {
+		document.getElementById("#p1").src = "IMGs/sleepyCat.gif";
+		document.getElementById("#p2").src = "IMGs/sleepyCat.gif";
+		$("#gb1").text("A");
+		$("#gb2").text("J");
+		$("#countDown").show();
+		$("#resetBtn").hide();
+		resetGame();
+		$("#countDown").text("Ready?");
+		$('#countDown').show();
+		timer = setInterval(function() {
+			handleTimer(count);
+		}, 1000);
+
+	});
+
+	// Stops game and declares winner
 	function stopGame() {
 		if (countF == 30) {
 			$(document).off('keydown');
 			$("#gb1").text("Player 1 wins!");
 			document.getElementById("#p2").src = "IMGs/sleepyCatlose.gif";
-		} else if (countSC == 30){
+		} else if (countSC == 30) {
 			$(document).off('keydown');
 			$("#gb2").text("Player 2 wins!");
 			document.getElementById("#p1").src = "IMGs/sleepyCatlose.gif";
-			
 		}
+		$('#resetBtn').show();
 	}
 
+	// Sets up the game board
 	function startGame() {
 		$('#countDown').hide();
 		//Allows for only successive keypresses (a>s>d>f)
@@ -130,4 +162,12 @@ $(document).ready(function() {
 
 		});
 	}
+	
+	$('.gameInst').hide();
+	$('.row').hide();
+	$('.gameBoard').hide();
+	$('#countDown').hide();
+	$('#resetBtn').hide();
+
+
 });
