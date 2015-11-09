@@ -25,6 +25,7 @@ Use Good Meowning to satisfy all itches.
 ### Planned Features
 - Revamping the colorscheme a bit to hold truer to classic GAMEBOY games
 - Adding different cats to choose from
+- Optimize for mobile users
 - Different waking techniques
 - A scoreboard to see how many cat's sleepcycles a player's disturbed
 - Perhaps make this readme a little more concise
